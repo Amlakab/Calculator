@@ -18,16 +18,16 @@ export default function Calculator() {
     setState(prev => calculate(prev, value))
   }
 
-  const buttons: ButtonValue[][] = [
-    ['C', '±', '%', '÷'],
-    ['7', '8', '9', '×'],
-    ['4', '5', '6', '-'],
-    ['1', '2', '3', '+'],
-    ['0', '.', '='],
-    ['sin', 'cos', 'tan', '√'],
-    ['log', 'ln', 'π', '^'],
-    ['(', ')', '!', 'e'],
-  ]
+const buttons: ButtonValue[][] = [
+  ['C', '±', '%', '÷'],
+  ['7', '8', '9', '×'],
+  ['4', '5', '6', '-'],
+  ['1', '2', '3', '+'],
+  ['⌫', '0', '.', '='], // Added ⌫ button next to 0
+  ['sin', 'cos', 'tan', '√'],
+  ['log', 'ln', 'π', '^'],
+  ['(', ')', '!', 'e'],
+]
 
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">

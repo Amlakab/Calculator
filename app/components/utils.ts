@@ -19,6 +19,19 @@ export const calculate = (
   }
 
   switch (buttonValue) {
+    case '⌫':
+      if (state.overwrite) return state
+      if (state.currentValue.length === 1) {
+        return {
+          ...state,
+          currentValue: '0',
+          overwrite: true
+        }
+      }
+      return {
+        ...state,
+        currentValue: state.currentValue.slice(0, -1)
+      }
     case 'C':
       return { currentValue: '0', previousValue: '', operation: '', overwrite: true }
     case '±':
