@@ -1,8 +1,9 @@
 import { FC } from 'react'
+import { ButtonValue } from './types'
 
 interface ButtonProps {
-  value: string
-  onClick: (value: string) => void
+  value: ButtonValue
+  onClick: (value: ButtonValue) => void
   className?: string
 }
 
